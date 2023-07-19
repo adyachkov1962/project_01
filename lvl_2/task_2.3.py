@@ -7,5 +7,11 @@
 # switch_it_up(10000) -> None
 # Использовать условный оператор if-elif-else нельзя!
 
-def switch_it_up(number):
-    pass
+def switch_it_up(digit):
+
+    dict_num = {0:'zero',1:'one',2:'two',3:'three',4:'four',
+                5:'five',6:'six',7:'seven',8:'eight',9:'nine'}
+    print(dict_num.get(digit))  
+       
+switch_it_up(3) # "3" для примера значения для функции
+
