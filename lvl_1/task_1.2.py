@@ -5,7 +5,8 @@
 # Список my_favorite_songs содержит список названий и длительности каждого трека
 # Выведите общее время звучания трех случайных песен в формате
 # Три песни звучат ХХХ минут
-
+import random
+import datetime
 my_favorite_songs = [
     ['Waste a Moment', 3.03],
     ['New Salvation', 4.02],
@@ -17,6 +18,18 @@ my_favorite_songs = [
     ['Nowhere to Run', 2.58],
     ['In This World', 4.02],
 ]
+
+
+random_3_sublist = random.choices(my_favorite_songs,k = 3)
+n = 0
+for i in random_3_sublist:
+    for j in i:
+        if type(j) == float:
+            n += j
+summ_time = round(n, 2)
+print(f"Три песни звучат {summ_time} минут")       
+ 
+
 
 # Пункт B. 
 # Есть словарь песен 
@@ -34,10 +47,17 @@ my_favorite_songs_dict = {
     'Nowhere to Run': 2.58,
     'In This World': 4.02,
 }
+random_3_subdict = random.choices(list(my_favorite_songs_dict.values()), k=3)
+n = 0
+for i in random_3_subdict:
+    n += i
+
+sum_dict_t = round(n, 2)
+print(f'Три песни звучат {sum_dict_t} минут')
 
 # Дополнительно для пунктов A и B
 # Пункт C.
-# Сгенерируйте случайные песни с помощью модуля random
+# Сгенерируйте случайные песни с помощью модуля random - выполнено
 # import random
 
 # Дополнительно 
