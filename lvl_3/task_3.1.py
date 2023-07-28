@@ -26,3 +26,28 @@
 #   - использовать готовые классы numpy.array() и pandas.DataFrame() запрещено!
 #   - проявите фантазию :)
 
+class Matrix:
+    def __init__(self, columns, rows, value):
+        self.columns = columns
+        self.rows = rows
+        self.value = value
+        self.field = [[value for i in range(columns)] for i in range(rows)]
+    def change(self, columns, rows, value):
+        self.field[columns][rows] = value
+        print(* self.field, sep = '\n')
+    def count(self):
+        print(f'Число коллонок: {self.columns}, число строк: {self.rows}')
+               
+# Создание экземпляра класса, 
+# возможность задавать параметры матрицы и заполнять одним значением       
+t = Matrix(5,7,3) 
+# метод позволяет изменять значения в конкретной ячейке     
+t.change(0,1,7)
+# метод выводит число колонок и строк
+t.count()
+
+
+
+
+
+
